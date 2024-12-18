@@ -1,0 +1,95 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=1024" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <title>impress.js | presentation tool based on the power of CSS3 transforms and transitions in modern browsers | by Bartek Szopka @bartaz</title>
+    
+    <meta name="description" content="impress.js is a presentation tool based on the power of CSS3 transforms and transitions in modern browsers and inspired by the idea behind prezi.com." />
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:regular,semibold,italic,italicsemibold|PT+Sans:400,700,400italic,700italic|PT+Serif:400,700,400italic,700italic" rel="stylesheet" />
+    <link href="css/impress-demo.css" rel="stylesheet" />
+    <link href="css/impress-common.css" rel="stylesheet" />   
+    <link rel="shortcut icon" href="favicon.png" />
+    <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+</head>
+
+<body class="impress-not-supported">
+    <audio autoplay>
+        <source src="audio/carol-of-the-bells-christmas-bells-129106.mp3" type="audio/mpeg"/>
+    </audio>
+    <div class="fallback-message">
+    <p>Your browser <b>doesn't support the features required</b> by impress.js, so you are presented with a simplified version of this presentation.</p>
+    <p>For the best experience please use the latest <b>Chrome</b>, <b>Safari</b> or <b>Firefox</b> browser.</p>
+</div>
+<div id="impress"
+    data-transition-duration="1000"  
+    data-width="1024"
+    data-height="768"
+    data-max-scale="3"
+    data-min-scale="0"
+    data-perspective="1000"
+    data-autoplay="7">
+
+    <div id="title" class="step" data-x="-2000" data-y="0" data-scale="4">
+        <h2>It is that time of the year...</h2>
+    </div>
+
+    <div id="s1" class="step" data-x="3000" data-y="3000" data-rotate="60" data-scale="5">
+        <p>When we <strong>code</strong> for fun<br/>
+        <img src="images/bell.svg" height="600px"/>
+        </p>
+    </div>
+
+    <div id="s2" class="step" data-x="6000" data-y="0" data-rotate="120" data-scale="5">
+        <p>We <strong>sing</strong> carols and eat cookies
+        <img src="images/ginger-man.svg" height="600px"/></p>
+        </p>
+    </div>
+
+    <div id="s3" class="step" data-x="6000" data-y="-3000" data-z="-3000" data-rotate="180" data-scale="5">
+        <p>Merry Christmas!
+        <img src="images/kugel.svg" height="600px"/></p>
+        </p>
+    </div>
+
+    <div id="s4" class="step" data-x="3000" data-y="-6000" data-z="-2500" data-rotate="240" data-scale="5">
+        <p>God Jul!
+        <img src="images/tree.svg" height="600px"/></p>
+        </p>
+    </div>
+
+    <div id="s5" class="step" data-x="0" data-y="-3000" data-z="-2000" data-rotate="300" data-scale="5">
+        <p>Crăciun fericit!
+        <img src="images/Weihnachtsmann.svg" height="600px"/></p>
+        </p>
+    </div>
+
+
+    <div id="s6" class="step" data-x="0" data-y="0" data-z="-10000" data-rotate="0" data-scale="1">
+        <p>Happy new year <b>2025</b>!
+        </p>
+    </div>
+</div>
+
+<div class="hint">
+    <p>Use a spacebar or arrow keys to navigate. <br/>
+       Press 'P' to launch speaker console.</p>
+</div>
+
+<script>
+    if ("ontouchstart" in document.documentElement) { 
+        document.querySelector(".hint").innerHTML = "<p>Swipe left or right to navigate</p>";
+    }
+</script>
+
+<script src="js/impress.js"></script>
+<script>
+    api = impress()
+    api.init();
+</script>
+</body>
+</html>
+
+
